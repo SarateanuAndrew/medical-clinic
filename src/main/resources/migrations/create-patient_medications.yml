@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-patient_medications.yml
+      author: andrei.sarateanu
+      failOnError: true
+      changes:
+        - sql:
+            sql:  CREATE TABLE patient_medications (
+              medications_id UUID NOT NULL UNIQUE, 
+              patient_id UUID NOT NULL);

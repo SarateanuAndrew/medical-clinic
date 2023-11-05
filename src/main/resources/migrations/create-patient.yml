@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-patient.yml
+      author: andrei.sarateanu
+      failOnError: true
+      changes:
+        - sql:
+            sql:  CREATE TABLE patient (
+              date_of_birth DATE, 
+              creation_date TIMESTAMP(6), 
+              modification_date TIMESTAMP(6), 
+              id UUID NOT NULL, 
+              firstname VARCHAR(255), 
+              gender VARCHAR(255) CHECK (gender IN ('MALE','FEMALE','DIVERS')), 
+              lastname VARCHAR(255), 
+              PRIMARY KEY (id));

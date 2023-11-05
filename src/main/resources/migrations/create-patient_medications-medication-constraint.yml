@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-patient_medications-medication-constraint.yml
+      author: andrei.sarateanu
+      failOnError: true
+      changes:
+        - sql:
+            sql:  ALTER TABLE IF EXISTS patient_medications ADD CONSTRAINT FKoaqthe0mq1uxo0xu4mskscopy FOREIGN KEY (medications_id) REFERENCES medication;
