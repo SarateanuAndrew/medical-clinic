@@ -18,6 +18,7 @@ import java.util.UUID;
 @Getter
 @Builder
 @Setter
+@With
 public class Patient {
     @Id
     @GeneratedValue
@@ -36,5 +37,6 @@ public class Patient {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
+    @JoinColumn(name = "patient_id")
     private List<Medication> medications;
 }

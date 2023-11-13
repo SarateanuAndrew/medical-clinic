@@ -21,6 +21,7 @@ import static jakarta.persistence.EnumType.STRING;
 @Getter
 @Builder
 @Setter
+@With
 @Table(name = "medication")
 public class Medication {
     @Id

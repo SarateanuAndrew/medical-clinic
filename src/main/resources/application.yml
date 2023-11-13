@@ -7,9 +7,9 @@ spring:
 
   jpa:
     show-sql: true
-    hibernate.ddl-auto: validate
+    hibernate.ddl-auto: create
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
 
   liquibase:
-    change-log: migrations/changelog.xml
+    change-log: migrations/changelog.yml

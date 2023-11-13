@@ -10,10 +10,6 @@ import java.time.Period;
 public class AgeLimitValidator implements ConstraintValidator<AgeLimit, LocalDate> {
 
     @Override
-    public void initialize(AgeLimit constraintAnnotation) {
-    }
-
-    @Override
     public boolean isValid(LocalDate dateOfBirth, ConstraintValidatorContext context) {
         LocalDate now = LocalDate.now();
         Period period = Period.between(dateOfBirth, now);

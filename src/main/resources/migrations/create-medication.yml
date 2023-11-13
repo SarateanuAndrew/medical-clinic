@@ -10,7 +10,8 @@ databaseChangeLog:
                 time TIME(6), 
                 creation_date TIMESTAMP(6), 
                 modification_date TIMESTAMP(6), 
-                id UUID NOT NULL, 
+                id UUID NOT NULL,
+                patient_id uuid, 
                 description VARCHAR(255), 
                 unit VARCHAR(255) CHECK (unit IN ('GRAMS','MILLIGRAMS','TABLET')), 
                 PRIMARY KEY (id));

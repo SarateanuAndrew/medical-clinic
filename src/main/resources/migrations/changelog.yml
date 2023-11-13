@@ -6,11 +6,5 @@ databaseChangeLog:
       - file: create-patient.yml
       - relativeToChangelogFile: true
   - include:
-      - file: create-patient_medications.yml
-      - relativeToChangelogFile: true
-  - include:
-      - file: create-patient_medications-medication-constraint.yml
-      - relativeToChangelogFile: true
-  - include:
-      - file: create-patient_medications-patient-constraint.yml
+      - file: add-medication-constraint.yml
       - relativeToChangelogFile: true
